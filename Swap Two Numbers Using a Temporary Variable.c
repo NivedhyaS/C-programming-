@@ -10,7 +10,7 @@ int main()
 	temp=a;
 	a=b;
 	b=temp;
-	printf("number after swaping is a=%d and b=%d",a,b);
+	printf("numbers after swaping is a=%d and b=%d",a,b);
 	return 0; 
 }
 
