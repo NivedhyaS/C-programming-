@@ -2,7 +2,7 @@
 int main()
 {
 	int i,even;
-	for(i=10;i<=100;i+=2)
+	for(i=10;i<=98;i+=2)
 	{
 		printf("%d ",i);
 	}
