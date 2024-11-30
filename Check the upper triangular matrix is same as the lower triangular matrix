@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main(){
+    int n;
+    printf("Enter the size of the matrix: ");
+    scanf("%d", &n);
+    int m[n][n];
+    printf("Enter elements of the matrix:\n");
+    for (int i=0;i<n;i++){
+        for (int j=0;j<n;j++){
+            scanf("%d", &m[i][j]);
+        }
+    }
+    int isTriangular = 1;
+    for (int i=0;i<n;i++){
+        for (int j=0;j<n;j++){
+            if (i > j && m[i][j] != 0) {
+                isTriangular=0;
+                break;
+            }
+            if (i<j&&m[i][j]!=0){ 
+                isTriangular = 0;
+                break;
+            }
+        }
+        if (!isTriangular) break;
+    }
+    if (isTriangular){
+        printf("The matrix is both upper triangular and lower triangular (diagonal matrix).\n");
+    } else {
+        printf("The matrix is not both upper and lower triangular.\n");
+    }
+    return 0;
+}
